@@ -14,6 +14,9 @@ const TextInput = ({ label, onChange, value }) => {
 
     return (
         <TextField
+            InputLabelProps={{
+                style: { fontSize: '16px' }, // Set font size for label only
+            }}
             label={label}
             // variant="outlined"
             value={inputValue}

@@ -5,11 +5,9 @@ import TextDisplay from './components/TextDisplay/TextDisplay';
 import {
     Container,
     CssBaseline,
-    Drawer,
     AppBar,
     Toolbar,
     Typography,
-    Divider,
     CircularProgress,
     Box, Button
 } from '@mui/material';
@@ -19,7 +17,6 @@ import cgiLogo from "./assets/logos/CGI_logo_color_rgb.svg"
 import TextInput from "./components/TextInput/TextInput";
 
 const App = () => {
-    const [drawerOpen, setDrawerOpen] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const [displayText, setDisplayText] = useState('');
     const [sparkCode, setSparkCode] = useState('');
@@ -137,6 +134,16 @@ const App = () => {
                         <TextDisplay isCode={false} textTitle="Prompt:" text={displayText}/>
                     )}
 
+                    {/*<TextDisplay isCode={false} textTitle="Prompt:" text={displayText}/>*/}
+
+                    {/*<Box style={{*/}
+                    {/*    height: '100px'*/}
+                    {/*}}>*/}
+                    {/*    {loading ? <CircularProgress/> : <p></p>}*/}
+                    {/*</Box>*/}
+
+                    {/*<TextDisplay isCode={true} textTitle="Spark Code:" text={sparkCode}/>*/}
+
                     {loading ? (
                         <CircularProgress/>
                     ) : (
@@ -145,6 +152,7 @@ const App = () => {
                             : <p></p>
                     )
                     }
+
                 </Box>
             </Container>
         </div>
